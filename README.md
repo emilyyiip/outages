@@ -1,1 +1,1 @@
-# recipe-ratings
+# outages slay
