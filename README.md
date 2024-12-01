@@ -141,10 +141,10 @@ We determined that ...
 ### MAR Analysis
 In this part, we tested the missingness of the `customers affected` column. We suspected that it would be missing based on the outage duration column due to 2 reasons:
 
-1. Incomplete Reporting for Short Outages
+1. Incomplete Reporting for Short Outages  
 For outages with a shorter duration, utility companies or reporting agencies might fail to record detailed information, such as the number of customers affected. The focus could be on resolving the issue quickly rather than documenting every aspect of the outage.
 
-2. Longer Outages Have Better Documentation
+2. Longer Outages Have Better Documentation  
 For longer outages, there might be more investigation and reporting, as these outages have a greater impact and require comprehensive recording. This could lead to a bias where data for customers affected is more likely to be recorded when outage duration is longer.
 
 
