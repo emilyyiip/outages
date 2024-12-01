@@ -4,6 +4,7 @@
        src="https://img.icons8.com/ios-filled/50/000000/light-on.png" 
        alt="Toggle Light/Dark Mode" 
        style="cursor: pointer; width: 30px; margin-left: 10px; background-color: white; border-radius: 50%;">
+  <span id="toggle-text" style="font-size: small; margin-left: 5px;">Turn me on/off</span>
 </h1>
 
 <!-- Add the script for light/dark mode functionality -->
