@@ -1,3 +1,62 @@
+<!-- Add the toggle button -->
+<button id="theme-toggle">Toggle Light/Dark Mode</button>
+
+<!-- Add a script to handle the toggle -->
+<script>
+    // Select the theme toggle button
+    const toggleButton = document.getElementById('theme-toggle');
+
+    // Check if there's a saved theme in localStorage
+    const savedTheme = localStorage.getItem('theme');
+
+    // Apply the saved theme if it exists
+    if (savedTheme) {
+        document.body.classList.toggle('dark-mode', savedTheme === 'dark');
+    }
+
+    // Add event listener to toggle button
+    toggleButton.addEventListener('click', () => {
+        // Toggle the dark-mode class on the body
+        document.body.classList.toggle('dark-mode');
+
+        // Save the current theme in localStorage
+        const currentTheme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+        localStorage.setItem('theme', currentTheme);
+    });
+</script>
+
+<!-- Add CSS for light and dark mode -->
+<style>
+    /* Default light mode styles */
+    body {
+        background-color: white;
+        color: black;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    /* Dark mode styles */
+    body.dark-mode {
+        background-color: black;
+        color: white;
+    }
+
+    /* Optional: Styling for the toggle button */
+    #theme-toggle {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        padding: 10px;
+        cursor: pointer;
+        background-color: #ddd;
+        border: none;
+        border-radius: 5px;
+    }
+
+    #theme-toggle:hover {
+        background-color: #bbb;
+    }
+</style>
+
 # Outage Analysis
 Authors: Claire Wang and Emily Yip
 
