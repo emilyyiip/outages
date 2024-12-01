@@ -163,7 +163,7 @@ Below is the empirical distribution of the test statistics.
   frameborder="0"
 ></iframe>
 
-After the permutation test, we found that the observed test statistic was **this** p-value obtained was **0**. Therefore, we can reject the null hypothesis and conclude that the missingness of values in the `customers affected` column is dependent on the outage duration.
+After the permutation test, we found that the observed test statistic was **0** p-value obtained was **0**. Therefore, we can reject the null hypothesis and conclude that the missingness of values in the `customers affected` column is dependent on the outage duration.
 
 ## Hypothesis Testing
 
