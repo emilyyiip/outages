@@ -134,8 +134,6 @@ We looked at the number of outages for each cause category in each month to dete
 
 We determined that ...
 
-### Missingness Dependency
-
 ## Assessment of Missingness
 
 ### MAR Analysis
