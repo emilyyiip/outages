@@ -1,33 +1,36 @@
-<!-- Add the toggle button -->
-<button id="theme-toggle">Toggle Light/Dark Mode</button>
+<h1>
+    Outage Analysis
+  <img id="theme-toggle" src="https://img.icons8.com/ios-filled/50/000000/light-on.png" alt="Toggle Light/Dark Mode" style="cursor: pointer; width: 30px; margin-left: 10px;">
+</h1>
 
-<!-- Add a script to handle the toggle -->
+<!-- Add the script for light/dark mode functionality -->
 <script>
-    // Select the theme toggle button
     const toggleButton = document.getElementById('theme-toggle');
-
-    // Check if there's a saved theme in localStorage
     const savedTheme = localStorage.getItem('theme');
 
     // Apply the saved theme if it exists
     if (savedTheme) {
         document.body.classList.toggle('dark-mode', savedTheme === 'dark');
+        toggleButton.src = savedTheme === 'dark' 
+            ? 'https://img.icons8.com/ios-filled/50/ffffff/light-off.png' 
+            : 'https://img.icons8.com/ios-filled/50/000000/light-on.png';
     }
 
     // Add event listener to toggle button
     toggleButton.addEventListener('click', () => {
-        // Toggle the dark-mode class on the body
-        document.body.classList.toggle('dark-mode');
+        const isDarkMode = document.body.classList.toggle('dark-mode');
+        toggleButton.src = isDarkMode 
+            ? 'https://img.icons8.com/ios-filled/50/ffffff/light-off.png' 
+            : 'https://img.icons8.com/ios-filled/50/000000/light-on.png';
 
         // Save the current theme in localStorage
-        const currentTheme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
-        localStorage.setItem('theme', currentTheme);
+        localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
     });
 </script>
 
 <!-- Add CSS for light and dark mode -->
 <style>
-    /* Default light mode styles */
+    /* Light mode (default) styles */
     body {
         background-color: white;
         color: black;
@@ -39,25 +42,8 @@
         background-color: black;
         color: white;
     }
-
-    /* Optional: Styling for the toggle button */
-    #theme-toggle {
-        position: fixed;
-        top: 10px;
-        right: 10px;
-        padding: 10px;
-        cursor: pointer;
-        background-color: #ddd;
-        border: none;
-        border-radius: 5px;
-    }
-
-    #theme-toggle:hover {
-        background-color: #bbb;
-    }
 </style>
 
-# Outage Analysis
 Authors: Claire Wang and Emily Yip
 
 ## Overview
