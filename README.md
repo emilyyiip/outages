@@ -1,6 +1,8 @@
 <h1>
-    Outage Analysis
-  <img id="theme-toggle" src="https://img.icons8.com/ios-filled/50/000000/light-on.png" alt="Toggle Light/Dark Mode" style="cursor: pointer; width: 30px; margin-left: 10px;">
+  Outage Analysis
+  <img id="theme-toggle" 
+       src="https://img.icons8.com/ios-filled/50/000000/light-on.png" 
+       style="cursor: pointer; width: 30px; margin-left: 10px;">
 </h1>
 
 <!-- Add the script for light/dark mode functionality -->
@@ -42,7 +44,18 @@
         background-color: black;
         color: white;
     }
+
+    /* Style for the light bulb image to ensure visibility in both modes */
+    #theme-toggle {
+        transition: filter 0.3s;
+    }
+
+    /* Change the light bulb brightness for better contrast in dark mode */
+    body.dark-mode #theme-toggle {
+        filter: invert(1); /* Inverts the colors to make the bulb visible in dark mode */
+    }
 </style>
+
 
 Authors: Claire Wang and Emily Yip
 
