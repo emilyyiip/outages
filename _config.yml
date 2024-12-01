@@ -1,4 +1,4 @@
 title: ""
-remote_theme: pages-themes/primer@v0.2.0
+remote_theme: jekyll-theme-primer
 plugins:
 - jekyll-remote-theme
