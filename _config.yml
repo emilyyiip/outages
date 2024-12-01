@@ -1,4 +1,2 @@
 title: ""
-remote-theme: sighingnow/jekyll-gitbook
-plugins:
-  - jekyll-remote-theme 
+theme: jekyll-theme-primer
