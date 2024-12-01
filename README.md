@@ -188,7 +188,7 @@ After doing the permutation test, we discovered that observed test statistic was
 
 ## Framing a Prediction Problem
 
-Our prediction problem will be predicting outage duration using other columns in our dataset, which extends our project theme, and we suspect it can be predicted from other variables.
+Our prediction problem will be predicting outage duration using other columns in our dataset. We chose this problem since we suspect outage duration to be predictable from other variables, and it fits into our project theme.
 
 ## Baseline Model
 
