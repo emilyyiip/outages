@@ -2,7 +2,8 @@
   Outage Analysis
   <img id="theme-toggle" 
        src="https://img.icons8.com/ios-filled/50/000000/light-on.png" 
-       style="cursor: pointer; width: 30px; margin-left: 10px;">
+       alt="Toggle Light/Dark Mode" 
+       style="cursor: pointer; width: 30px; margin-left: 10px; background-color: white; border-radius: 50%;">
 </h1>
 
 <!-- Add the script for light/dark mode functionality -->
@@ -14,16 +15,18 @@
     if (savedTheme) {
         document.body.classList.toggle('dark-mode', savedTheme === 'dark');
         toggleButton.src = savedTheme === 'dark' 
-            ? 'https://img.icons8.com/ios-filled/50/ffffff/light-off.png' 
+            ? 'https://img.icons8.com/ios/50/ffffff/light-on.png' 
             : 'https://img.icons8.com/ios-filled/50/000000/light-on.png';
+        toggleButton.style.backgroundColor = savedTheme === 'dark' ? 'black' : 'white';
     }
 
     // Add event listener to toggle button
     toggleButton.addEventListener('click', () => {
         const isDarkMode = document.body.classList.toggle('dark-mode');
         toggleButton.src = isDarkMode 
-            ? 'https://img.icons8.com/ios-filled/50/ffffff/light-off.png' 
+            ? 'https://img.icons8.com/ios/50/ffffff/light-on.png' 
             : 'https://img.icons8.com/ios-filled/50/000000/light-on.png';
+        toggleButton.style.backgroundColor = isDarkMode ? 'black' : 'white';
 
         // Save the current theme in localStorage
         localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
@@ -45,14 +48,11 @@
         color: white;
     }
 
-    /* Style for the light bulb image to ensure visibility in both modes */
+    /* Light bulb styling */
     #theme-toggle {
-        transition: filter 0.3s;
-    }
-
-    /* Change the light bulb brightness for better contrast in dark mode */
-    body.dark-mode #theme-toggle {
-        filter: invert(1); /* Inverts the colors to make the bulb visible in dark mode */
+        border-radius: 50%;
+        padding: 5px;
+        transition: background-color 0.3s;
     }
 </style>
 
