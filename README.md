@@ -1,7 +1,7 @@
-#Outage Analysis
+# Outage Analysis
 Authors: Claire Wang and Emily Yip
 
-##Overview
+## Overview
 This is a comprehensive data science project created for DSC80 at UCSD that analyzes powers outages across the United States. The project encompasses all components of statistical analysis, starting with exploratory data analysis, followed by hypothesis testing and prediction models. The primary focus of this project is to analyze the relationships between outage duration and context of the outage.
 
 ## Introduction
