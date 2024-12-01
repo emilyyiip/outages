@@ -189,9 +189,9 @@ We will use a linear regression model to make our predictions, and use root mean
 
 We transformed the following features:
 
-'postal_code': This is a nominal categorical variable that was transformed using **OneHotEncoding**.
-'climate_region': This is a nominal categorical variable that was transformed using **OneHotEncoding**.
-'cause_category': This is a nominal categorical variable that was transformed using **OneHotEncoding**.
+`postal_code`: This is a nominal categorical variable that was transformed using **OneHotEncoding**.
+`climate_region`: This is a nominal categorical variable that was transformed using **OneHotEncoding**.
+`cause_category`: This is a nominal categorical variable that was transformed using **OneHotEncoding**.
 
 The remaining features were passed into the model without changes.
 
