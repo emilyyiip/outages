@@ -155,7 +155,7 @@ The test statistic used was the difference in mean outage durations and the sign
 Below is the empirical distribution of the test statistics.
 
 <iframe
-  src=""
+  src="assets/empirical_missing.html"
   width="800"
   height="600"
   frameborder="0"
@@ -178,7 +178,7 @@ Significance Level: 0.05
 Below is the empirical distribution of the test statistics:
 
 <iframe
-  src=""
+  src="assets/empirical_hypo.html"
   width="800"
   height="600"
   frameborder="0"
