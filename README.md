@@ -113,7 +113,7 @@ In the first part of our exploratory data analysis, I want to look at the distri
 
 We wanted to look at the distribution of outages by month to see what month/season seemed to have the most outages.
 <iframe
-  src=""
+  src="assets/distribution_outage_month.html"
   width="800"
   height="600"
   frameborder="0"
@@ -126,7 +126,7 @@ We discovered that ...
 We looked at the number of outages for each cause category in each month to determine which categories were the most common in each month.
 
 <iframe
-  src=""
+  src="assets/causes_by_month.html"
   width="800"
   height="600"
   frameborder="0"
