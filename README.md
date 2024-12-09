@@ -232,14 +232,16 @@ For missing values, we decided to simply drop rows with them because there wasn'
 
 For hyperparameters, we had GridSearchCV iterate through these combinations of hyperparameters: 
 
-- 'max_depth': \[2, 4, 5, 7, 10, 15, 18\]
-- 'min_samples_split': \[2, 5, 10, 20, 50, 100, 200\]
-- 'criterion': \['gini', 'entropy'\]
+- `max_depth`: \[2, 4, 5, 7, 10, 15, 18\]
+- `min_samples_split`: \[2, 5, 10, 20, 50, 100, 200\]
+- `criterion`: \['gini', 'entropy'\]
 
 After 5 folds of cross-validation, our best model had an accuracy of 0.94 and used these hyperparameters: `gini` as `criterion`, 18 as `max_depth`, and 2 as `min_samples_split`. 
 
 
+## Model Evaluation
 
+We decided to check for accuracy parity at different times of the year. To do this, we compared the model accuracy between June and December. Our model achieved 96% accuracy for June and 99% for December. Since both of these are close and fairly accurate, we were satisfied with the performance of our model. 
 
 
 
