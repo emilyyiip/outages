@@ -177,7 +177,7 @@ Below is the empirical distribution of the test statistics.
   frameborder="0"
 ></iframe>
 
-After the permutation test, we found that the observed test statistic was **0** p-value obtained was **0**. Therefore, we can reject the null hypothesis and conclude that the missingness of values in the `customers affected` column is dependent on the outage duration.
+After the permutation test, we found that the observed test statistic was **773.5465909090908** p-value obtained was **0.005**. Therefore, we can reject the null hypothesis and conclude that the missingness of values in the `customers affected` column is dependent on the outage duration.
 
 ## Hypothesis Testing
 
@@ -252,7 +252,7 @@ For hyperparameters, we had GridSearchCV iterate through these combinations of h
 - `min_samples_split`: \[2, 5, 10, 20, 50, 100, 200\]
 - `criterion`: \['gini', 'entropy'\]
 
-After 5 folds of cross-validation, our best model had an accuracy of 0.94 and used these hyperparameters: `gini` as `criterion`, 18 as `max_depth`, and 2 as `min_samples_split`. 
+After 5 folds of cross-validation, our best model had an accuracy of **0.94** and used these hyperparameters: `gini` as `criterion`, 18 as `max_depth`, and 2 as `min_samples_split`. 
 
 
 ## Model Evaluation
@@ -265,7 +265,7 @@ Alternative Hypothesis: The absolute difference in model accuracy between Januar
 
 To test this hypothesis, we used a permutation test with a p value of 0.05.
 
-After doing the permutation test, we discovered that observed test statistic was **0.06** and the p value obtained was **0.38**. Given that the p-value of 0.38 is more than the significance level of 0.05, we fail to reject the null hypothesis. Therefore, our model does not perform differently across the months of January and August.
+After doing a permutation test, we discovered that observed test statistic was **0.06** and the p value obtained was **0.38**. Given that the p-value of 0.38 is more than the significance level of 0.05, we fail to reject the null hypothesis. Therefore, our model does not perform differently across the months of January and August.
 
 
 
