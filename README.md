@@ -94,6 +94,10 @@ The columns that are relevant to the analysis are as follows:
 - `OUTAGE.DURATION`: duration of outage in minutes
   
 - `CUSTOMERS.AFFECTED`: number of customers affected by the outage event
+  
+- `RED.PRICE`: monthly electricity price in the residential sector (cents/kilowatt-hour)
+
+- `DEMAND.LOSS.MW`: amount of peak demand lost during an outage event (in Megawatt)
 
 ## Data Cleaning and Exploratory Analysis
 
@@ -109,7 +113,7 @@ The head of the dataframe is displayed below:
 
 ### Univariate Analysis
 
-In the first part of our exploratory data analysis, I want to look at the distributions of single variables.
+In the first part of our exploratory data analysis, we wanted want to look at the distributions of single variables to determine if there were any relationships that we wanted to study further.
 
 We wanted to look at the distribution of outages by month to see what month/season seemed to have the most outages.
 <iframe
@@ -118,10 +122,11 @@ We wanted to look at the distribution of outages by month to see what month/seas
   height="600"
   frameborder="0"
 ></iframe>
-
-We discovered that ...
+We noticed that there were more outages in the summer and the winter compared to the fall and spring.
 
 ### Bivariate Analysis
+
+We also wanted want to look at relationships between multiple variables.
 
 We looked at the number of outages for each cause category in each month to determine which categories were the most common in each month.
 
@@ -132,7 +137,18 @@ We looked at the number of outages for each cause category in each month to dete
   frameborder="0"
 ></iframe>
 
-We determined that ...
+The distributions of the cause category by month did not vary as much as we expected to, with the majority of outages were caused by severe weather every month.
+
+We also looked at the distribution of outage duration by cause category, since this relates to the theme of our analysis.
+
+<iframe
+  src="assets/outage_duration_by_cause_category.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+The category that had the highest median number of outage durations is fuel supply emergencies, which makes sense since they are more likely to be triggered by natural disasters, which take longer to restore power.
 
 ## Assessment of Missingness
 
