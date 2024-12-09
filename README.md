@@ -183,9 +183,9 @@ After the permutation test, we found that the observed test statistic was **0** 
 
 We performed a hypothesis test to determine whether outages caused by fuel supply emergencies tend to last longer.
 
-Null hypothesis: The median outage duration caused by fuel supply emergencies is the same as the population median outage duration.
+**Null hypothesis**: The median outage duration caused by fuel supply emergencies is the same as the population median outage duration.
 
-Alternative hypothesis: The median outage duration caused by fuel supply emergencies is more than the population median outage duration.
+**Alternative hypothesis**: The median outage duration caused by fuel supply emergencies is more than the population median outage duration.
 
 To test this hypothesis, we used a bootstrap resampling approach. Specifically, we generated a bootstrap distribution of the median outage durations by resampling from the population data and compared the observed median outage duration for outages caused by fuel supply emergencies to this bootstraped distribution.
 
@@ -257,7 +257,11 @@ After 5 folds of cross-validation, our best model had an accuracy of 0.94 and us
 
 ## Model Evaluation
 
-We decided to check for accuracy parity at different times of the year. To do this, we compared the model accuracy between June and December. Our model achieved 96% accuracy for June and 99% for December. Since both of these are close and fairly accurate, we were satisfied with the performance of our model. 
+We decided to check for accuracy parity at different times of the year. To do this, we decided to compared the model accuracy between January and August. Our model achieved % accuracy for January and 99% for December. 
+
+Null Hypothesis: The mean accuracy of the model in January is equal to the mean accuracy of the model in December. Observed differences in their mean accuracies is due to random chance.
+
+
 
 
 
