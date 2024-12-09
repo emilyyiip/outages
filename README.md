@@ -210,7 +210,7 @@ After fitting the model, its root mean squared error was **224828.4913697597**, 
 
 ## Final Model
 
-We decided not do predict outage duration this time because, as you can see from the plot, there were many outliers, which made the regression difficult. Instead, we will predict cause category. 
+We decided not do predict outage duration this time because, as you can see from the plot, there were many outliers, which made the regression difficult. Outliers make it hard to fit the line and to evaluate error. 
 
 <iframe
   src="assets/outage_durations.html"
@@ -219,9 +219,24 @@ We decided not do predict outage duration this time because, as you can see from
   frameborder="0"
 ></iframe>
 
+As you can see, there are many outliers in the data. Instead, for our final model we decided to predict the cause category of an outage. We chose to use a random forest classifier and GridSearchCV to find the best hyperparameters for our data. We used these features:  `'month'`, `'climate_region'`, `'postal_code'`, `'res_price'`, and `'outage_duration'`. 
+
+There were 7 different cause categories- severe weather, intentional attack, system operability disruption, equipment failure, public appeal, fuel supply emergency, and islanding.  We chose to assign these numbers to them so it could processed by our random forest model: 
+
+`mapping = {'severe weather': 1, 'intentional attack': 2, 'system operability disruption': 3, 
+           'equipment failure': 4, 'public appeal': 5, 'fuel supply emergency': 6, 
+           'islanding': 7}`
 
 
+For missing values, we decided to simply drop rows with them because there wasn't a significant amount (5). We then one-hot encoded `postal_code` and `climate_region`. 
 
+For hyperparameters, we had GridSearchCV iterate through these combinations of hyperparameters: 
+
+- 'max_depth': \[2, 4, 5, 7, 10, 15, 18\]
+- 'min_samples_split': \[2, 5, 10, 20, 50, 100, 200\]
+- 'criterion': \['gini', 'entropy'\]
+
+After 5 folds of cross-validation, our best model had an accuracy of 0.94 and used these hyperparameters: `gini` as `criterion`, 18 as `max_depth`, and 2 as `min_samples_split`. 
 
 
 
