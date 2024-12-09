@@ -257,9 +257,17 @@ After 5 folds of cross-validation, our best model had an accuracy of 0.94 and us
 
 ## Model Evaluation
 
-We decided to check for accuracy parity at different times of the year. To do this, we decided to compared the model accuracy between January and August. Our model achieved % accuracy for January and 99% for December. 
+We decided to check for accuracy parity at different times of the year. To do this, we decided to compared the model accuracy between January and August. 
 
-Null Hypothesis: The mean accuracy of the model in January is equal to the mean accuracy of the model in December. Observed differences in their mean accuracies is due to random chance.
+Null Hypothesis: The absolute difference in model accuracy between January and August is due to random chance. The model does not perform differently across these months.
+
+Alternative Hypothesis: The absolute difference in model accuracy between January and August is statistically significant. The model performs different across these months.
+
+To test this hypothesis, we used a permutation test with a p value of 0.05.
+
+After doing the permutation test, we discovered that observed test statistic was **0.06** and the p value obtained was **0.38**. Given that the p-value of 0.38 is more than the significance level of 0.05, we fail to reject the null hypothesis. Therefore, our model does not perform differently across the months of January and August.
+
+
 
 
 
