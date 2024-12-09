@@ -210,7 +210,14 @@ After fitting the model, its root mean squared error was **224828.4913697597**, 
 
 ## Final Model
 
-We decided not do predict outage duration this time because there were many outliers, which made the regression difficult. Instead, we will predict cause category. 
+We decided not do predict outage duration this time because, as you can see from the plot, there were many outliers, which made the regression difficult. Instead, we will predict cause category. 
+
+<iframe
+  src="assets/outage_durations.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 
 
