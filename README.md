@@ -259,9 +259,9 @@ After 5 folds of cross-validation, our best model had an accuracy of **0.94** an
 
 We decided to check for accuracy parity at different times of the year. To do this, we decided to compared the model accuracy between January and August. 
 
-Null Hypothesis: The absolute difference in model accuracy between January and August is due to random chance. The model does not perform differently across these months.
+**Null Hypothesis**: The absolute difference in model accuracy between January and August is due to random chance. The model does not perform differently across these months.
 
-Alternative Hypothesis: The absolute difference in model accuracy between January and August is statistically significant. The model performs different across these months.
+**Alternative Hypothesis**: The absolute difference in model accuracy between January and August is statistically significant. The model performs different across these months.
 
 To test this hypothesis, we used a permutation test with a p value of 0.05.
 
