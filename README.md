@@ -222,7 +222,7 @@ We transformed the following features:
 
 The remaining features were passed into the model without changes.
 
-After fitting the model, its root mean squared error was **224828.4913697597**, and its coefficient of determination was 0.028334274869406983, meaning that our features were not very effective in predicting the outage duration.
+After fitting the model, its root mean squared error was **224828.4913697597**, and its coefficient of determination was **0.028334274869406983**, meaning that our features were not very effective in predicting the outage duration.
 
 ## Final Model
 
@@ -235,7 +235,7 @@ We decided not do predict outage duration this time because, as you can see from
   frameborder="0"
 ></iframe>
 
-As you can see, there are many outliers in the data. Instead, for our final model we decided to predict the cause category of an outage. We chose to use a random forest classifier and GridSearchCV to find the best hyperparameters for our data. We used these features:  `'month'`, `'climate_region'`, `'postal_code'`, `'res_price'`, and `'outage_duration'`. 
+Instead, for our final model we decided to predict the cause category of an outage. We chose to use a random forest classifier and GridSearchCV to find the best hyperparameters for our data. We used these features:  `'month'`, `'climate_region'`, `'postal_code'`, `'res_price'`, and `'outage_duration'`. 
 
 There were 7 different cause categories- severe weather, intentional attack, system operability disruption, equipment failure, public appeal, fuel supply emergency, and islanding.  We chose to assign these numbers to them so it could processed by our random forest model: 
 
