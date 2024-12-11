@@ -109,8 +109,6 @@ The following outlines my data cleaning process:
 3. We converted the month and outage duration to integers to simplify future numerical operations
 4. We dropped the state column, since we decided to work with postal codes instead.
 
-The head of the dataframe is displayed below:
-
 ### Univariate Analysis
 
 In the first part of our exploratory data analysis, we wanted want to look at the distributions of single variables to determine if there were any relationships that we wanted to study further.
